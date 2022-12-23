@@ -1,14 +1,20 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body,html {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .backgroundScreen{
+    z-index: -5;
+    position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
+    width: 100vw;
 }
 
 .backgroundLight {
@@ -33,28 +39,122 @@ body {
 }
 
 .hamburgerButton{
-    border-radius: 7.5px;
-    width: 50px;
-    height: 50px;
     position: absolute;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
     background-color: #1a243c;
+    left: 7.5%;
+}
+
+.hamburgerButton span:nth-child(2){
+    left: calc(50% + 2px);
+    width: 15px;
 }
 
 span {
     display: flex;
     justify-content: center;
-    width: 20px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    width: 10px;
     border-radius: 3px;
     height: 2px;
-    background: #fff;
-    transition: all .3s;
-    margin-top: 33.33%;
+    background: whitesmoke;
+    top: 33%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
 
 span+span {
-    margin-top: 5px;
+    margin-top: 4px;
+}
+
+.navbar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    left: 12%;
+}
+
+.searchBar {
+    background-color: #1a243c;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 500px;
+    color: whitesmoke;
+    padding-left: 13%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.searchBarContainer{
+    padding-left: 33.33%;
+    position: relative;
+}
+
+input::placeholder {
+    font-size: .7rem;
+    position: absolute;
+    height: .7rem;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.searchBarContainer img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 20px;
+}
+
+.searchBarContainer img:nth-child(3) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 20px;
+}
+
+.icons{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 7.5%;
+}
+
+.icons div{
+    display: inline-block;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    background-color: #1a243c;
+}
+
+.icons div + div {
+    margin-left: 10px;
+}
+
+.icons div img{
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    top: 25%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
