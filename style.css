@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 body,html {
     margin: 0;
@@ -30,11 +30,11 @@ body,html {
     border-radius: 10px;
     background: hsla(221, 45%, 12%, 0.7);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     position: relative;
     height: 90vh;
-    width: 95vw;
+    width: 90vw;
     z-index: -1;
 }
 
@@ -44,7 +44,7 @@ body,html {
     width: 45px;
     height: 45px;
     background-color: #1a243c;
-    left: 7.5%;
+    left: 10%;
 }
 
 .hamburgerButton span:nth-child(2){
@@ -52,7 +52,7 @@ body,html {
     width: 15px;
 }
 
-span {
+.hamburgerButton span {
     display: flex;
     justify-content: center;
     width: 10px;
@@ -65,7 +65,7 @@ span {
     transform: translateX(-50%);
 }
 
-span+span {
+.hamburgerButton span+span {
     margin-top: 4px;
 }
 
@@ -76,12 +76,13 @@ span+span {
     align-items: center;
 }
 
-h1 {
+.logo {
+    font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-size: 1.2rem;
     font-weight: 100;
     position: absolute;
-    left: 12%;
+    left: 15%;
 }
 
 .searchBar {
@@ -134,7 +135,7 @@ input::placeholder {
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right: 7.5%;
+    margin-right: 10%;
 }
 
 .icons div{
@@ -157,4 +158,75 @@ input::placeholder {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.primarySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.primaryScreen{
+    margin-top: 50px;
+    object-fit: cover;
+    object-position: top;
+    width: 72vw;
+    height: 60vh;
+    border-radius: 50px;
+}
+
+.circleText {
+    font-weight: 300;
+    height: 160px;
+    position: absolute;
+    left: 260px;
+    top: 135px;
+    font-size: .4rem;
+    animation: circle 10s linear infinite reverse;
+}
+
+@keyframes circle {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.spanjs{
+    position: absolute;
+    transform-origin: 0 80px;
+    color: whitesmoke;
+}
+
+.arrowUpRight {
+    position: absolute;
+    left: 235px;
+    top: 193.33px;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 3rem;
+    position: absolute;
+    left: 390px;
+    top: 100px;
+    text-align: justify;
+}
+
+.lorem{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: .75rem;
+    position: absolute;
+    left: 800px;
+    top: 135px;
+    text-align: justify;
+    width: 375px;
+    line-height: 25px;
 }
