@@ -172,7 +172,7 @@ input::placeholder {
     object-fit: cover;
     object-position: top;
     width: 72vw;
-    height: 60vh;
+    height: 50vh;
     border-radius: 50px;
 }
 
@@ -211,7 +211,7 @@ input::placeholder {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 3vw;
     position: absolute;
     left: 390px;
     top: 100px;
@@ -222,11 +222,104 @@ input::placeholder {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-weight: 100;
-    font-size: .75rem;
+    font-size: .75vw;
     position: absolute;
-    left: 800px;
+    left: 41.66vw;
     top: 135px;
     text-align: justify;
     width: 375px;
     line-height: 25px;
 }
+
+.cardsSection {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards {
+    bottom: 100px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cards li {
+    list-style-type: none;
+}
+
+.cards li img:not(.eth, .rightArrow) {
+    object-fit: cover;
+    float: left;
+    height: 27.32vh;
+    width: 13.02vw;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.cards li .descCardOne, .cards li .descCardTwo, .cards li .descCardThree, .cards li .descCardFour{
+    border-radius: 5px;
+    margin-left: 62.5px;
+    position: absolute;
+    bottom: -50px;
+    height: 8.19vh;
+    width: 11.71vw;
+    background: #1a243c;
+    color: whitesmoke;
+    align-items: center;
+}
+
+.cards li div h2 {
+    margin: 10px;
+    font-size: .85vw;
+    font-weight: 100;
+    height: 10px;
+}
+
+.firstNum, .secondNum, .thirdNum, .fourthNum{
+    position: absolute;
+    font-size: .5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 62.5px;
+    top: 10px;
+    right: 10px;
+    height: 2.18vh;
+    width: 1.56vw;
+    background: #101725;
+    color: whitesmoke;
+}
+
+.test {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+img.eth{
+    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+}
+
+span.price {
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+img.rightArrow {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+
+
