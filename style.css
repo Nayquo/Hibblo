@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
-body,html {
+body,
+html {
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
-.backgroundScreen{
+.backgroundScreen {
     z-index: -5;
     position: absolute;
     display: flex;
@@ -38,7 +39,8 @@ body,html {
     z-index: -1;
 }
 
-.hamburgerButton{
+.hamburgerButton {
+    z-index: 1;
     position: absolute;
     border-radius: 5px;
     width: 45px;
@@ -47,12 +49,14 @@ body,html {
     left: 10%;
 }
 
-.hamburgerButton span:nth-child(2){
+.hamburgerButton .middle-bar {
     left: calc(50% + 2px);
     width: 15px;
 }
 
 .hamburgerButton span {
+    transform-origin: center;
+    transition: width 1s, transform 1s, left 1s, top 1s;
     display: flex;
     justify-content: center;
     width: 10px;
@@ -96,7 +100,7 @@ body,html {
     font-family: 'Roboto', sans-serif;
 }
 
-.searchBarContainer{
+.searchBarContainer {
     padding-left: 33.33%;
     position: relative;
 }
@@ -131,14 +135,14 @@ input::placeholder {
     height: 20px;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: end;
     width: 100%;
     margin-right: 10%;
 }
 
-.icons div{
+.icons div {
     display: inline-block;
     border-radius: 5px;
     width: 45px;
@@ -146,11 +150,11 @@ input::placeholder {
     background-color: #1a243c;
 }
 
-.icons div + div {
+.icons div+div {
     margin-left: 10px;
 }
 
-.icons div img{
+.icons div img {
     display: flex;
     justify-content: center;
     border-radius: 3px;
@@ -167,12 +171,12 @@ input::placeholder {
     width: 100%;
 }
 
-.primaryScreen{
+.primaryScreen {
     margin-top: 50px;
     object-fit: cover;
     object-position: top;
     width: 72vw;
-    height: 50vh;
+    height: 60vh;
     border-radius: 50px;
 }
 
@@ -187,15 +191,16 @@ input::placeholder {
 }
 
 @keyframes circle {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
 
-.spanjs{
+.spanjs {
     position: absolute;
     transform-origin: 0 80px;
     color: whitesmoke;
@@ -207,7 +212,7 @@ input::placeholder {
     top: 193.33px;
 }
 
-.title{
+.title {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-weight: 300;
@@ -218,7 +223,7 @@ input::placeholder {
     text-align: justify;
 }
 
-.lorem{
+.lorem {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-weight: 100;
@@ -254,19 +259,24 @@ input::placeholder {
 .cards li img:not(.eth, .rightArrow) {
     object-fit: cover;
     float: left;
-    height: 27.32vh;
-    width: 13.02vw;
+    height: 250px;
+    width: 250px;
     border-radius: 10px;
-    margin-left: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
-.cards li .descCardOne, .cards li .descCardTwo, .cards li .descCardThree, .cards li .descCardFour{
+.cards li .descCardOne,
+.cards li .descCardTwo,
+.cards li .descCardThree,
+.cards li .descCardFour {
     border-radius: 5px;
-    margin-left: 62.5px;
+    margin-left: 37.5px;
+    margin-right: 37.5px;
     position: absolute;
     bottom: -50px;
-    height: 8.19vh;
-    width: 11.71vw;
+    height: 80px;
+    width: 225px;
     background: #1a243c;
     color: whitesmoke;
     align-items: center;
@@ -274,14 +284,17 @@ input::placeholder {
 
 .cards li div h2 {
     margin: 10px;
-    font-size: .85vw;
-    font-weight: 100;
+    font-size: .85rem;
+    font-weight: 300;
     height: 10px;
 }
 
-.firstNum, .secondNum, .thirdNum, .fourthNum{
+.firstNum,
+.secondNum,
+.thirdNum,
+.fourthNum {
     position: absolute;
-    font-size: .5vw;
+    font-size: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,8 +302,8 @@ input::placeholder {
     margin-left: 62.5px;
     top: 10px;
     right: 10px;
-    height: 2.18vh;
-    width: 1.56vw;
+    height: 21px;
+    width: 30px;
     background: #101725;
     color: whitesmoke;
 }
@@ -301,15 +314,15 @@ input::placeholder {
     align-items: center;
 }
 
-img.eth{
+img.eth {
     margin-left: 15px;
     height: 25px;
     width: 25px;
 }
 
 span.price {
-    font-weight: 100;
-    font-size: 1.2rem;
+    font-weight: 300;
+    font-size: 1.2vw;
     margin-left: 10px;
     margin-right: auto;
 }
@@ -319,7 +332,3 @@ img.rightArrow {
     width: 25px;
     margin-right: 10px;
 }
-
-
-
-
