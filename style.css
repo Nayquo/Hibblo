@@ -8,7 +8,7 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-.blackScreen{
+.blackScreen {
     transition: height .5s, width .5s;
     height: 0vh;
     width: 0vw;
@@ -18,16 +18,18 @@ html {
     border-radius: 10px 10px 70% 10px;
     background: hsl(220, 44%, 12%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .blackScreenBlur {
-    transition: height .5s, width .5s, opacity .5s;
+    transition: height .5s, width .5s;
     z-index: 1;
     position: absolute;
     top: 0;
     height: 0vh;
     width: 0vw;
-    transition-delay: .5s;
     transition-property: opacity;
     opacity: 0;
     border-radius: 10px;
@@ -67,6 +69,7 @@ html {
 }
 
 .hamburgerButton {
+    cursor: pointer;
     z-index: 6000;
     position: absolute;
     border-radius: 5px;
@@ -107,6 +110,48 @@ html {
     align-items: center;
 }
 
+.navMenu {
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    font-size: 3rem;
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.navMenu li {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    letter-spacing: 35px;
+}
+
+.navMenu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navMenu li a::after {
+    content: "";
+    height: 1px;
+    width: 0;
+    background: whitesmoke;
+    display: block;
+    transition: .25s ease-in-out;
+}
+
+.navMenu li a:hover {
+    color: crimson;
+}
+
+.navMenu li a:hover::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: crimson;
+    display: block;
+}
+
 .logo {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
@@ -143,6 +188,7 @@ input::placeholder {
 }
 
 .searchBarContainer img:nth-child(2) {
+    cursor: pointer;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -153,6 +199,7 @@ input::placeholder {
 }
 
 .searchBarContainer img:nth-child(3) {
+    cursor: pointer;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -170,6 +217,7 @@ input::placeholder {
 }
 
 .icons div {
+    cursor: pointer;
     display: inline-block;
     border-radius: 5px;
     width: 45px;
@@ -358,4 +406,5 @@ img.rightArrow {
     height: 25px;
     width: 25px;
     margin-right: 10px;
+    cursor: pointer;
 }

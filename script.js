@@ -1,11 +1,12 @@
 const circleText = document.querySelector(".circleText");
 const hoverCircleText = document.querySelector(".hoverCircleText");
-const hamburgerButton = document.querySelector(".hamburgerButton")
-const topBar = document.querySelector(".top-bar")
-const middleBar = document.querySelector(".middle-bar")
-const bottomBar = document.querySelector(".bottom-bar")
-const blackScreen = document.querySelector(".blackScreen")
-const blackScreenBlur = document.querySelector(".blackScreenBlur")
+const hamburgerButton = document.querySelector(".hamburgerButton");
+const topBar = document.querySelector(".top-bar");
+const middleBar = document.querySelector(".middle-bar");
+const bottomBar = document.querySelector(".bottom-bar");
+const blackScreen = document.querySelector(".blackScreen");
+const blackScreenBlur = document.querySelector(".blackScreenBlur");
+const navMenu = document.querySelector(".navMenu");
 
 
 circleText.innerHTML = circleText.textContent.replace(/\S/g,"<span class=\"spanjs\">$&</span>");
@@ -35,6 +36,8 @@ function openAndClose () {
         blackScreenBlur.style.height = "90vh"
         blackScreenBlur.style.width = "90vw"
         blackScreenBlur.style.opacity = "1"
+        navMenu.style.transition = "opacity 2s"
+        navMenu.style.opacity = "1"
         a = 1
     } else {
         topBar.style.width = "10px"
@@ -53,6 +56,8 @@ function openAndClose () {
         blackScreenBlur.style.height = "0vh"
         blackScreenBlur.style.width = "0vw"
         blackScreenBlur.style.opacity = "0"
+        navMenu.style.transition = "none"
+        navMenu.style.opacity = "0"
         a = 0
     }
 }
