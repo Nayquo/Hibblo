@@ -103,6 +103,11 @@ html {
     margin-top: 4px;
 }
 
+.hamburgerButton:hover {
+    transition: background .5s ease-in-out;
+    background: crimson;
+}
+
 .navbar {
     margin-top: 50px;
     width: 100%;
@@ -144,7 +149,7 @@ html {
     color: crimson;
 }
 
-.navMenu li a:hover::after{
+.navMenu li a:hover::after {
     content: "";
     height: 1px;
     width: 100%;
@@ -223,6 +228,11 @@ input::placeholder {
     width: 45px;
     height: 45px;
     background-color: #1a243c;
+}
+
+.icons div:hover {
+        transition: background .5s ease-in-out;
+    background: crimson;
 }
 
 .icons div+div {
@@ -339,6 +349,7 @@ input::placeholder {
     border-radius: 10px;
     margin-left: 25px;
     margin-right: 25px;
+    transition: transform .5s linear, border-radius .5s linear;
 }
 
 .cards li .descCardOne,
@@ -383,6 +394,51 @@ input::placeholder {
     color: whitesmoke;
 }
 
+.cardOne:hover {
+    animation: scaleIn .5s ease-in-out both;
+}
+.cardOne{
+    animation: scaleOut .5s ease-in-out both;
+}
+.cardTwo:hover {
+    animation: scaleIn .5s ease-in-out both;
+}
+.cardTwo {
+    animation: scaleOut .5s ease-in-out both;
+}
+.cardThree:hover {
+    animation: scaleIn .5s ease-in-out both;
+}
+.cardThree {
+    animation: scaleOut .5s ease-in-out both;
+}
+.cardFour:hover {
+    animation: scaleIn .5s ease-in-out both;
+}
+.cardFour {
+    animation: scaleOut .5s ease-in-out both;
+}
+
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(100%);
+    }
+    to {
+        transform: scale(115%);
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        transform: scale(115%);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
 .test {
     margin-top: 20px;
     display: flex;
@@ -397,14 +453,54 @@ img.eth {
 
 span.price {
     font-weight: 300;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     margin-left: 10px;
     margin-right: auto;
 }
 
-img.rightArrow {
-    height: 25px;
-    width: 25px;
+svg{
+    color: whitesmoke;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
     cursor: pointer;
 }
+
+
+
+@keyframes colorArrowIn {
+    from {
+        fill: whitesmoke;
+    }
+    to {
+        fill: crimson;
+    }
+}
+@keyframes colorArrowOut {
+    from {
+        fill: crimson;
+    }
+    to {
+        fill: whitesmoke;
+    }
+}
+
+@keyframes colorDescIn {
+    from {
+        background: #1a243c;
+    }
+    to {
+        background: #101725;
+    }
+}
+
+@keyframes colorDescOut {
+    from {
+        background: #101725;
+    }
+    to {
+        background: #1a243c;
+    }
+}
+
+
